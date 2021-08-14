@@ -34,6 +34,7 @@ body {
   position: relative;
   -webkit-transition: 300ms ease-in;
   transition: 300ms ease-in;
+  margin: 20px;
 }
 
 .cont_input input {
