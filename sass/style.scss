@@ -2,11 +2,13 @@
     --color_pri:rgb(0, 0, 54);
     --color_activo: rgb(6, 252, 67);
 }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     display: flex;
     justify-content: center;
@@ -16,24 +18,27 @@ body{
     height: 100vh;
     font-family: sans-serif;
 }
+
 .cont_input{
     height: 40px;
     width: 300px;
     border: 1px solid #FFFFFF;
     border-radius: 8px;
     position: relative;
+    transition: 300ms ease-in;
 
     input{
         outline: 0;
         border: 0;
         width: 100%;
         height: 100%;
-        padding: 10px 18px;
+        padding: 10px 15px;
         font-size: 15px;
         background: none;
         box-sizing: border-box;
         color: #FFF;
     }
+
     label{
         position: absolute;
         top: .7rem;
@@ -49,10 +54,12 @@ body{
     }
     
 }
+
 .cont_input:focus-within{
+
     border: 1px solid var(--color_activo);
 
-    input ~ label{
+    input + label{
         color: var(--color_activo);
         top: -9px;
         left: 6px;
@@ -62,9 +69,10 @@ body{
         box-sizing: border-box;
     }
 }
+
 .cont_input:not(:focus-within){
     
-    input:not(:placeholder-shown) ~ label{
+    input:not(:placeholder-shown) + label{
         color: var(--color_activo);
         top: -9px;
         left: 6px;
